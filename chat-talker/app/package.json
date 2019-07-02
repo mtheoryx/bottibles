@@ -1,0 +1,16 @@
+{
+  "name": "chat-talker",
+  "version": "1.0.0",
+  "description": "Service for sending chat messages to twitch",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"LUL TODO\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "David Poindexter <119065+mtheoryx@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "comfy.js": "^1.0.10"
+  }
+}

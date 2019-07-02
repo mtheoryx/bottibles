@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  chat-talker:
+    build: ./chat-talker/
+    image: chat-talker
+    container_name: chat-talker
+    command: node index.js
+    ports:
+      - 9000:9000
+    volumes:
+      - ./chat-talker/app:/usr/app
+      - /usr/app/node_modules
