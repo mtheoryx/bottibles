@@ -5,7 +5,7 @@ services:
     build: ./chat-talker/
     image: chat-talker
     container_name: chat-talker
-    command: node index.js
+    command: npm run dev
     ports:
       - 9000:9000
     volumes:
