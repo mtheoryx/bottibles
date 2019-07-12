@@ -1,13 +1,39 @@
 version: '3'
 
 services:
-  chat-talker:
-    build: ./chat-talker/
-    image: chat-talker
-    container_name: chat-talker
+  chat-reader:
+    build: ./chat-reader/
+    image: chat-reader
+    container_name: chat-reader
     command: npm run dev
     ports:
       - 9000:9000
     volumes:
       - ./chat-talker/app:/usr/app
       - /usr/app/node_modules
+  chat-writer:
+    build: ./chat-writer
+    image: chat-writer
+    container_name: chat-writer
+    command: npm run dev
+    ports:
+      - 9001:9000
+    volumes:
+      - ./chat-writer/app:/usr/app
+      - /usr/app/node_modules
+  # store:
+  #   build: ./store/
+  #   image: store
+  #   container_name: store
+  #   command: npm start
+  #   volumes:
+  #     - /usr/app/node_modules
+  #     - /store/app:/usr/app
+  # store-db:
+  #   image: amazon/dynamodb-local:1.11.477
+  #   container_name: store-db
+  #   command: -jar DynamoDBLocal.jar -dbPath /home/dynamodblocal/data/
+  #   ports:
+  #     - 9004:8000
+  #   volumes:
+  #     - ./store-db/data/:/home/dynamodblocal/data/

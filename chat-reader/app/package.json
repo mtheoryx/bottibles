@@ -1,5 +1,5 @@
 {
-  "name": "chat-talker",
+  "name": "chat-reader",
   "version": "1.0.0",
   "description": "Service for sending chat messages to twitch",
   "main": "app/index.js",

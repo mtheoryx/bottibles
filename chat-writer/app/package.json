@@ -1,0 +1,20 @@
+{
+  "name": "chat-writer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "The friends we made along the way",
+  "license": "MIT",
+  "dependencies": {
+    "comfy.js": "^1.0.10",
+    "dotenv": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
